@@ -317,7 +317,7 @@ body{height:100dvh}
 @media(max-height:700px) and (max-width:600px){#view-date .panel{padding:8px}#view-date .date-fields>.field{padding:5px}#view-date .date-parts .control{height:32px}#view-date .date-picker{height:32px}#view-date .result-card{margin-top:5px;padding:7px 9px}#view-date .result-value{font-size:20px}}
 </style>
 <script>
-(()=>{const stopScroll=e=>{if(e.target instanceof Element){if(e.target.closest('.menu-drawer,.history-list'))return;const shortcuts=e.target.closest('.shortcut-list');if(shortcuts){if(e.type==='wheel'&&shortcuts.scrollWidth>shortcuts.clientWidth&&Math.abs(e.deltaY)>=Math.abs(e.deltaX)){shortcuts.scrollLeft+=e.deltaY;e.preventDefault()}return}}e.preventDefault()};window.addEventListener('wheel',stopScroll,{capture:true,passive:false});window.addEventListener('touchmove',stopScroll,{capture:true,passive:false})})();
+(()=>{const stopScroll=e=>{if(e.target instanceof Element){if(e.target.closest('.menu-drawer,.history-list,.memo-body'))return;const shortcuts=e.target.closest('.shortcut-list');if(shortcuts){if(e.type==='wheel'&&shortcuts.scrollWidth>shortcuts.clientWidth&&Math.abs(e.deltaY)>=Math.abs(e.deltaX)){shortcuts.scrollLeft+=e.deltaY;e.preventDefault()}return}}e.preventDefault()};window.addEventListener('wheel',stopScroll,{capture:true,passive:false});window.addEventListener('touchmove',stopScroll,{capture:true,passive:false})})();
 </script>
 </body>
 </html>
